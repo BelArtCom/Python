@@ -10,7 +10,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        self.wfile.write(bytes('<html><head><title>https://pythonbasics.org</title><link rel="shortcut icon" href="https://www.google.com/favicon.ico" /></head>', 'utf-8'))
+        self.wfile.write(bytes('<html><head><title>https://pythonbasics.org</title></head>', 'utf-8'))
         self.wfile.write(bytes('<p>Fibonacci number = %s</p>'  % str(fibonacci.get_fibonacci_num(fibonacci.str_to_int(self.path))), 'utf-8'))
         self.wfile.write(bytes('<body>', 'utf-8'))
         self.wfile.write(bytes('<p>This web server calculated fibonacci number.</p>', 'utf-8'))
