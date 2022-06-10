@@ -1,11 +1,11 @@
 # to run server:
 ```
-python3 server.py
+PORT=8080 python3.10 server.py
 ```
 
 # to develop:
 ```
-npx nodemon --exec python3 server.py
+npx nodemon --exec PORT=3100 python3.10 server.py
 ```
 
 # to build Docker image:
@@ -14,5 +14,5 @@ docker build -t server .
 ```
 # to run Docker container:
 ```
-docker run -p 8080:8080 server
+docker run -e PORT=3100 -p 3100:3100 server
 ```

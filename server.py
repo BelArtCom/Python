@@ -1,8 +1,9 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time
+import os
 
-hostName = "0.0.0.0"
-serverPort = 8080
+hostName = '0.0.0.0'
+serverPort = int(os.environ['PORT'])
 
 def str_to_int(string):
     return int(string.lstrip('/'))
