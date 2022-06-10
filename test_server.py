@@ -1,7 +1,7 @@
-import unittest
-from server import get_fibonacci_num
+from unittest import TestCase
+from fibonacci import get_fibonacci_num
 
-class ServerCorrectReturn(unittest.TestCase):
+class ServerCorrectReturn(TestCase):
 
     def test_result(self):
         self.assertEqual(get_fibonacci_num(2), 1)
