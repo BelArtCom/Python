@@ -7,6 +7,10 @@ PORT=8080 python3.10 server.py
 ```
 npx nodemon --exec PORT=3100 python3.10 server.py
 ```
+# to test
+```
+python3.10 -m unittest test_server.py 
+```
 
 # to build Docker image:
 ```
