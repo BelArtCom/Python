@@ -10,7 +10,12 @@ class MyServer(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            self.wfile.write(bytes(str(utils.get_fibonacci_num(int(self.path.lstrip('/fibonacci')))), 'utf-8'))
+            self.wfile.write(bytes(str(utils.get_fibonacci_num(int(self.path.lstrip('/fibonacci/')))), 'utf-8'))
+        elif self.path.startswith('/factorial'):
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html')
+            self.end_headers()
+            self.wfile.write(bytes(str(utils.get_factorial_num(int(self.path.lstrip('/factorial/')))), 'utf-8'))
         else:
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
