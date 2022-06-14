@@ -27,3 +27,4 @@ def get_factorial_num(index):
         result *= i
     
     return result
+    
