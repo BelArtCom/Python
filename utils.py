@@ -7,5 +7,5 @@ def get_fibonacci_num(fibonacci):
         fib_list[1] = fib_list_0 + fib_list_1
     return fib_list[1]
 
-def str_to_int(string):
+def get_user_input(string):
     return int(string.lstrip('/'))

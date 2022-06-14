@@ -1,5 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import fibonacci
+import utils
 import os
 
 hostName = '0.0.0.0'
@@ -11,7 +11,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         self.wfile.write(bytes('<html><head><title>https://pythonbasics.org</title></head>', 'utf-8'))
-        self.wfile.write(bytes('<p>Fibonacci number = %s</p>'  % str(fibonacci.get_fibonacci_num(fibonacci.str_to_int(self.path))), 'utf-8'))
+        self.wfile.write(bytes('<p>Fibonacci number = %s</p>'  % str(utils.get_fibonacci_num(utils.get_user_input(self.path))), 'utf-8'))
         self.wfile.write(bytes('<body>', 'utf-8'))
         self.wfile.write(bytes('<p>This web server calculated fibonacci number.</p>', 'utf-8'))
         self.wfile.write(bytes('</body></html>', 'utf-8'))

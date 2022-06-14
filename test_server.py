@@ -1,5 +1,5 @@
 from unittest import TestCase
-from fibonacci import get_fibonacci_num
+from utils import get_fibonacci_num
 
 class ServerCorrectReturn(TestCase):
 
